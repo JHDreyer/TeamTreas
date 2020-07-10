@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+
+
+{% block content%}
+<div class="box">
+    <h1>Sup {{user.username}} this is the Home page : D</h1>
+    <h1> things {{users.socialaccount.email}}</h1>
+    <h1>{{users.emial}}</h1>
+    <h1>{{user.username}}</h1>
+    <h1>{{user.username}}</h1>
+</div>
+
+
+{% endblock content %}
