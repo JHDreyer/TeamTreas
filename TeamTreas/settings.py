@@ -41,8 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
+    #maak forms nice
+    'crispy_forms',
+        
     'Treas',
 
+    #nodig om in te log me ander social platforms
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -105,6 +109,18 @@ AUTHENTICATION_BACKENDS = [
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
+
+#PASSWORD HASHERS VIR AS HULLE REGISTER DEUR ONS SITE BEGIN MET BOONSTE EN 
+# AS DIE BOONSTE NIE INSTALLED IS OP DIE SERVER NIE GAAN DIT NA DIE VOLGENDE EEN
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+]
+
+
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -162,3 +178,6 @@ SOCIALACCOUNT_PROVIDERS = {
          }
      }
  }
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

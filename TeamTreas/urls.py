@@ -19,13 +19,13 @@ from django.views.generic import TemplateView
 from django.contrib import admin
 
 from Treas import views
-
 urlpatterns = [
     path('',TemplateView.as_view(template_name="index.html"), name='index'),
     path('admin/', admin.site.urls, name='admin'),
     path('accounts/', include('allauth.urls')),
     path('about/',TemplateView.as_view(template_name="about.html"), name='about'),
     path('Treas/',include("Treas.urls", namespace="Treas")),
-    path('accounts/profile/',TemplateView.as_view(template_name="profile.html")),
-    path('logout', views.user_logout, name='logout')
+    path('logout/', views.user_logout, name='logout'),
+    path('login/',views.user_login,name='login'),
+    path('register/',views.register,name='register'),
 ]

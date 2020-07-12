@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="../static/Treas/css/style.css"> 
 
     <title>Base</title>
+    <!-- add block title thing -->
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -39,7 +40,7 @@
           </li>
           {% else %}
           <li class="nav-item">
-            <a class='nav-link' href="{% provider_login_url 'google' %}">Login with Google<span class="glyphicon glyphicon-user"></span>
+            <a class='nav-link' href="{% url 'login' %}">Login<span class="glyphicon glyphicon-user"></span>
             </a>
           </li>
           {% endif %}
@@ -50,6 +51,7 @@
       </div>
     </div>
   </nav>
+  <br><br>
 {% block content%}
 {% endblock content %}
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
