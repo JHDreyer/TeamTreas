@@ -10,18 +10,10 @@ from django.views.generic import (TemplateView,ListView,
                                   UpdateView,DeleteView,FormView)
 
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import ContactForm
+
 
 @login_required
 def user_logout(request):
     logout(request)
     return redirect('/')
 
-class ContactView(FormView):
-    template_name = 'contact.html'
-    form_class = ContactForm
-    success_url = '/thanks/'
-
-    def form_valid(self,form):
-        form.send_email()
-        return super().form_valid(form)
