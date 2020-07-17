@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="explore">
+    <div class="container">
+
+        <h1>Explore Businesses</h2>
+        <hr>
+
+        <div>
+        <div class="row">
+            {% for business in options %}
+            <div class="col">
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <div class="card-body">
+                     <h5 class="card-title">{{business.name}}</h5>
+                        <p class="card-text">{{business.type}}</p>
+                    <a href="#" class="btn btn-primary">View Business</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}   
+        </div>
+    
+    </div>       
+        
+    </div>
+
+</div>
+
+
+{% endblock %}

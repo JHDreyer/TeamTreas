@@ -83,3 +83,12 @@ body{
         background: #fff;
     }
 }
+
+/* JH addition  */
+#explore{
+    background-image: url('/static/Treas/images/arial_road&sea.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 700px;
+}
