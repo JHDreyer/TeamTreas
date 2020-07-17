@@ -41,6 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
+    #JH addition:
+    'explore.apps.ExploreConfig',
+    'customer_profile.apps.CustomerProfileConfig',
+
+
     #app responsible for sending emails 
     'sendemail.apps.SendemailConfig',
 
