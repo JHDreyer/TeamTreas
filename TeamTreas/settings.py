@@ -27,6 +27,15 @@ SECRET_KEY = 'vv=g^c*s52#d%n#%soe@wgm@d%g1wb81d4s4th_&z&+gpvif5f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_HOST_USER = 'harrywillyodendaal@gmail.com'
+EMAIL_HOST_PASSWORD = 'TheUnflinching1'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+# neeeded else got ConnectionRefusedError
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 ALLOWED_HOSTS = []
 
 
@@ -184,4 +193,8 @@ SOCIALACCOUNT_PROVIDERS = {
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# videos for emails :
+# watch these videos again after creating website and neet to first create a business email
+# https://www.youtube.com/watch?v=gpTrmDpadZY&list=PLe8w3mPM6W4ziXOsiA0c-ciMoficiW7ZK&index=3&t=44s
+# https://www.youtube.com/watch?v=iSJE1MeyA_k
