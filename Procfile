@@ -1,1 +1,1 @@
-web: gunicorn teamtreas.wsgi
+web: gunicorn TeamTreas.wsgi
