@@ -1,0 +1,2 @@
+Security:
+- Set envirionment variables to allow access from different machines

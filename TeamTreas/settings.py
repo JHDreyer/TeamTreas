@@ -27,7 +27,7 @@ SECRET_KEY = 'vv=g^c*s52#d%n#%soe@wgm@d%g1wb81d4s4th_&z&+gpvif5f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['teamtreasapp.herokuapp.com']
 
 
 # Application definition
