@@ -161,6 +161,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles") # the static root for the Heroku push
+
 STATIC_URL = '/static/'
 
 
